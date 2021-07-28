@@ -13,7 +13,7 @@ pipeline {
                 '''
             }
         }
-        stage('SIT Siebel Test Automation - Build') {
+        stage('Build') {
             steps {
                 bat 'java -jar %DISA_DIR%\\DesktopIntSiebelAgent\\plugins\\SiebelTestAutomation\\Framework\\KWDPresetup.jar /d %DISA_DIR% /r %SIEBEL_URL% /n %NODE_NAME% /j %SIEBEL_REST_USR% /g %SIEBEL_REST_PSW% /x %DISA_DIR%'
             }
